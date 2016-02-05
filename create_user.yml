@@ -1,0 +1,14 @@
+---
+- hosts: "{{ hosts }}"
+  remote_user: deployer
+  sudo: yes
+  vars:
+    username: "{{ username }}"
+    fullname: "{{ username }}"
+    password: "{{ password }}"
+    group_add: y
+  tasks:
+   - template: src=files/create_user.sh.j2 dest=/Users/deployer/create_user.sh mode=u+rwx
+   - command: chmod +x /Users/deployer/create_user.sh 
+   - shell: /Users/deployer/create_user.sh
+   - authorized_key: key="{{ lookup('file', '~/.ssh/id_rsa.pub') }}" user="{{ username }}"

@@ -1,0 +1,25 @@
+---
+- hosts: "{{ hosts }}"
+  remote_user: "{{ username }}"
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/usr/local/bin"
+  tasks:
+      - homebrew: name=ansible
+      - homebrew: name=python
+      - homebrew: name=wget
+      - homebrew: name=imagemagick
+      - homebrew: name=htop
+      - homebrew: name=dnsmasq
+      - homebrew: name=cloc
+      - homebrew: name=awscli
+      - homebrew: name=node
+      - homebrew: name=nodejs
+      - homebrew: name=npm
+      - homebrew: name=nvm
+      - easy_install: name=pip
+      - easy_install: name=mitproxy
+      - easy_install: name=httpie
+      - get_url: url=https://getcomposer.org/composer.phar dest=/usr/local/bin/composer
+      - shell: "npm install -g bower"
+      - shell: "npm install -g less"
+      - shell: "npm install -g yo"

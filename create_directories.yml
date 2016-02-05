@@ -1,0 +1,17 @@
+---
+- hosts: "{{ hosts }}"
+  remote_user: "{{ username }}"
+  sudo: yes
+  tasks:
+  - file: path=/usr/local/Workspace state=directory
+  - file: path=/usr/local/Workspace state=directory
+  - file: path=/usr/local/Workspace/Dbdumps state=directory
+  - file: path=/usr/local/Workspace/Javascript state=directory
+  - file: path=/usr/local/Workspace/Scripts state=directory
+  - file: path=/usr/local/Workspace/Sites state=directory
+  - file: path=/usr/local/Workspace/Sources state=directory
+  - file: path=/usr/local/Workspace/Sources/config state=directory
+  - file: path=/usr/local/Workspace/Sources/logs state=directory
+  - file: path=/usr/local/Workspace/Sources/vhosts state=directory
+  - file: path=/usr/local/Workspace/Sources/vhosts/default state=directory
+  - copy: src=usr/local/Workspace/Sources/vhosts/default/index.php dest=/usr/local/Workspace/Sources/vhosts/default

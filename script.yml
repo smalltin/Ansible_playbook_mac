@@ -1,0 +1,19 @@
+---
+- hosts: "{{ hosts }}"
+  remote_user: "{{ username }}"
+  sudo: yes
+  tasks:
+  - name: ping
+    ping:
+- include: Create_directories.yml
+  vars:
+      username: "{{ username }}"
+      hosts: "{{ hosts }}"
+- include: Install_software.yml
+  vars:
+      username: "{{ username }}"
+      hosts: "{{ hosts }}"
+- include: Install_software_pass.yml
+  vars:
+      username: "{{ username }}"
+      hosts: "{{ hosts }}"

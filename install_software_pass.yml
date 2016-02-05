@@ -1,0 +1,21 @@
+---
+- hosts: "{{ hosts }}"
+  remote_user: "{{ username }}"
+  environment:
+    HOMEBREW_CASK_OPTS: --appdir=/Applications
+  sudo: yes
+  tasks:
+     - homebrew_cask: name=alfred
+     - homebrew_cask: name=paw 
+     - homebrew_cask: name=iterm2 
+     - homebrew_cask: name=parallels-desktop 
+     - homebrew_cask: name=tunnelblick 
+     - homebrew_cask: name=pgadmin3 
+     - homebrew_cask: name=hipchat 
+     - homebrew_cask: name=phpstorm 
+     - homebrew_cask: name=google-chrome
+     - homebrew_cask: name=firefox 
+     - homebrew_cask: name=dbvisualizer 
+     - homebrew_cask: name=sublime-text 
+     - homebrew_cask: name=skype 
+     - homebrew_cask: name=evernote
