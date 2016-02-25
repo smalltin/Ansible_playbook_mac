@@ -1,0 +1,10 @@
+---
+- hosts: "{{ hosts }}"
+  remote_user: "{{ username }}"
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/usr/local/bin"
+  tasks:
+  - name: Installation des paquets npm
+    shell: "npm install -g bower"
+    shell: "npm install -g less"
+    shell: "npm install -g yo"

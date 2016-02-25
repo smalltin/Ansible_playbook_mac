@@ -13,6 +13,10 @@
   vars:
       username: "{{ username }}"
       hosts: "{{ hosts }}"
+- include: Install_npm.yml
+  vars:
+      username: "{{ username }}"
+      hosts: "{{ hosts }}"
 - include: Install_software_pass.yml
   vars:
       username: "{{ username }}"

@@ -3,15 +3,16 @@
   remote_user: "{{ username }}"
   sudo: yes
   tasks:
-  - file: path=/usr/local/Workspace state=directory
-  - file: path=/usr/local/Workspace state=directory
-  - file: path=/usr/local/Workspace/Dbdumps state=directory
-  - file: path=/usr/local/Workspace/Javascript state=directory
-  - file: path=/usr/local/Workspace/Scripts state=directory
-  - file: path=/usr/local/Workspace/Sites state=directory
-  - file: path=/usr/local/Workspace/Sources state=directory
-  - file: path=/usr/local/Workspace/Sources/config state=directory
-  - file: path=/usr/local/Workspace/Sources/logs state=directory
-  - file: path=/usr/local/Workspace/Sources/vhosts state=directory
-  - file: path=/usr/local/Workspace/Sources/vhosts/default state=directory
-  - copy: src=usr/local/Workspace/Sources/vhosts/default/index.php dest=/usr/local/Workspace/Sources/vhosts/default
+  - name: Création des repertoires de travail  
+    file: path=/Workspace state=directory
+    file: path=/Workspace/Dbdumps state=directory
+    file: path=/Workspace/Javascript state=directory
+    file: path=/Workspace/Scripts state=directory
+    file: path=/Workspace/Sites state=directory
+    file: path=/Workspace/Sources state=directory
+    file: path=/Workspace/Sources/config state=directory
+    file: path=/Workspace/Sources/logs state=directory
+    file: path=/Workspace/Sources/vhosts state=directory
+    file: path=/Workspace/Sources/vhosts/default state=directory
+  - name: Copie du fichier index.php
+    copy: src=usr/local//Workspace/Sources/vhosts/default/index.php dest=/Workspace/Sources/vhosts/default/

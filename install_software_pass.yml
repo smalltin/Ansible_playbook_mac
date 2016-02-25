@@ -5,17 +5,33 @@
     HOMEBREW_CASK_OPTS: --appdir=/Applications
   sudo: yes
   tasks:
-     - homebrew_cask: name=alfred
-     - homebrew_cask: name=paw 
-     - homebrew_cask: name=iterm2 
-     - homebrew_cask: name=parallels-desktop 
-     - homebrew_cask: name=tunnelblick 
-     - homebrew_cask: name=pgadmin3 
-     - homebrew_cask: name=hipchat 
-     - homebrew_cask: name=phpstorm 
-     - homebrew_cask: name=google-chrome
-     - homebrew_cask: name=firefox 
-     - homebrew_cask: name=dbvisualizer 
-     - homebrew_cask: name=sublime-text 
-     - homebrew_cask: name=skype 
-     - homebrew_cask: name=evernote
+     - name: Installation d'alfred
+       homebrew_cask: name=alfred
+     - name: Installation d'atom
+       homebrew_cask: name=atom
+     - name: Installation de paw
+       homebrew_cask: name=paw
+     - name: Installation iterm2
+       homebrew_cask: name=iterm2
+     - name: Installation de parallels-desktop
+       homebrew_cask: name=parallels-desktop
+     - name: Installation de tunnelblick
+       homebrew_cask: name=tunnelblick
+     - name: Installation de pgadmin3
+       homebrew_cask: name=pgadmin3
+     - name: Installation de hipchat
+       homebrew_cask: name=hipchat
+     - name: Installation de phpstorm
+       homebrew_cask: name=phpstorm
+     - name: Installation de google-chrome
+       homebrew_cask: name=google-chrome
+     - name: Installation de firefox
+       homebrew_cask: name=firefox
+     - name: Installation de dbvisualizer
+       homebrew_cask: name=dbvisualizer
+     - name: Installation de sublime-text
+       homebrew_cask: name=sublime-text
+     - name: Installation de skype
+       homebrew_cask: name=skype
+     - name: Installation de evernote
+       homebrew_cask: name=evernote
