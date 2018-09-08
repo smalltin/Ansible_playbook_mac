@@ -28,6 +28,8 @@
         homebrew: name=npm
       - name: Installation de nvm
         homebrew: name=nvm
+      - name: Installation de cmatrix
+        homebrew: name=cmatrix
       - name: Installation de pip
         easy_install: name=pip
       - name: Installation de mitproxy
