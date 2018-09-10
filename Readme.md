@@ -1,6 +1,6 @@
 Ansible playbook pour Mac 
-============================= Ces 
-playbooks permettent l'installation 
+============================= 
+Ces playbooks permettent l'installation 
 de paquage via Homebrew et Homebrew 
 Cask
 ## Prérequis OSX machine cible
